@@ -298,21 +298,27 @@ int main()
     cout<< endl;
 
 
-    cout << "#wyswietlanie obiektow klasy (* new) z kolekcji (* new)" << endl;
+    cout << "#wyswietlanie obiektow klasy (* new) z kolekcji (* new) z roznymi atrybutami" << endl;
     vector<MyClass*> * v3 = new vector<MyClass*>();
 
     MyClass* a3 = new MyClass(10);
+    a3->valueInt = 11;
+    a3->valueFloat = 11.1;
+    a3->valueBool = true;
+
     MyClass* b3 = new MyClass(20);
+    b3->valueInt = 21;
+    b3->valueFloat = 21.1;
+    b3->valueBool = false;
+
     MyClass* d3 = new MyClass();
-    MyClass* c3 = new MyClass(30);
 
     v3->push_back(a3);
     v3->push_back(b3);
     v3->push_back(d3);
-    v3->push_back(c3);
 
     for(auto i: *v3){
-        cout << i->id << " ";
+        i->printData();
     }
     cout<< endl;
 

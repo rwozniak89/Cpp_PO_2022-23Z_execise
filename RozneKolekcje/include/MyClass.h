@@ -17,6 +17,10 @@ public:
     ~MyClass() { cout << "Obcject destoyed" << endl; }
 
     MyClass(const MyClass& other) { cout << "Obcject copied" << endl; }
+
+    void printData(){
+         cout << "id: "<< this->id << ", valueInt: " <<  this->valueInt   << ", valueFloat: "<< this->valueFloat   << ", valueBool: "<< this->valueBool  << "\n";
+    }
 };
 
 #endif // MyClass_H
