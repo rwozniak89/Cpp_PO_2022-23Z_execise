@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MyList.h"
+#include "List.h"
 
 
 using namespace std;
@@ -8,7 +8,7 @@ int main()
 {
     cout << "MojaLista!" << endl;
 
-    MyList* mojaLista = new MyList();
+    List* mojaLista = new List();
 
     mojaLista->printList();
 
@@ -17,11 +17,8 @@ int main()
     mojaLista->addToEnd(3);
     mojaLista->printList();
 
-    mojaLista->addToBeginning(0);
-    mojaLista->addToBeginning(-1);
-    mojaLista->printList();
 
-    mojaLista->addToBeginning(1);
+    mojaLista->addToBeginning(50);
     mojaLista->addToEnd(4);
     mojaLista->printList();
 
@@ -53,10 +50,6 @@ int main()
     mojaLista->printList();
 
     mojaLista->removeKey(1);
-    mojaLista->printList();
-
-    mojaLista->clearAll();
-    mojaLista->addToEnd(0);
     mojaLista->printList();
 
     return 0;

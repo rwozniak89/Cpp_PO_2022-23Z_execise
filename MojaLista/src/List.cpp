@@ -69,21 +69,6 @@ void List::removeKey(int key)
 	}
 }
 
-void List::clearAll()
-{
-	ListElement* temp = firstElement;
-	while (temp) {
-		if (temp->next) {
-			firstElement = temp->next;
-			delete temp;
-			temp = firstElement;
-		}
-		else {
-			delete temp;
-			temp = 0;
-		}
-	}
-}
 
 void List::printList()
 {
@@ -91,7 +76,7 @@ void List::printList()
 	cout << "[";
 	this->size = 0;
 	while (temp) {
-		if(temp != firstElement)
+		if(temp != firstElement )
 			cout << ", ";
 		cout << temp->getKey();
 		temp = temp->next;
@@ -100,17 +85,3 @@ void List::printList()
 	cout << "] size: " << this->size << endl;
 }
 
-void List::printListWithArrow()
-{
-	ListElement* temp = firstElement;
-	cout << "List: [";
-	this->size = 0;
-	while (temp) {
-		if(temp != firstElement)
-			cout << " -> ";
-		cout << temp->getKey();
-		temp = temp->next;
-		this->size++;
-	}
-	cout << "] size: " << this->size << endl;
-}
