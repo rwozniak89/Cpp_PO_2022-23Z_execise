@@ -9,6 +9,54 @@
 using namespace std;
 
 
+class MyBox
+{
+private:
+    int valueInt;
+    float valueFloat;
+
+    vector<MyClass*> * box;
+
+public:
+    MyClass* testObject;
+
+    MyBox()
+    {
+        valueInt = 0;
+        valueFloat = 0.0;
+        testObject = new MyClass();
+        box = new vector<MyClass*>();
+    }
+
+    void addObjToBox(MyClass* newObj )
+    {
+        if(box->size() < 5 )
+        {
+           box->push_back(newObj);
+            cout << "dodano obj do boxa" << endl;
+        }
+        else
+        {
+            cout << "brak miejsca w box" << endl;
+        }
+
+    }
+
+    void printBox()
+    {
+        cout<< "Info o Box, valueInt:" << valueInt << ", valueFloat:" << valueFloat <<endl;
+         for(auto i: *(this->box) ) {
+            i->printData();
+        }
+        cout<< endl;
+    }
+
+
+
+};
+
+
+
 bool larger(int a, int b){ return a> b;}
 
 int main()
@@ -92,7 +140,7 @@ int main()
     cout << endl;
 
 
-    cout << "#wyswietlanie list<int>* za pomoca for each oraz iterator" << endl;
+    cout << "#wyswietlanie list<int>* za pomoca for oraz iterator" << endl;
     for (auto it = my_list2->cbegin(); it != my_list2->cend(); ++it)
     {
         cout << *it << " ";
@@ -321,6 +369,24 @@ int main()
         i->printData();
     }
     cout<< endl;
+
+
+    cout << "#operacje na wlasnym box" << endl;
+
+    MyBox* box = new MyBox();
+
+
+    box->addObjToBox(a3);
+    box->addObjToBox(b3);
+    box->addObjToBox(a);
+    box->addObjToBox(b);
+    box->addObjToBox(c);
+    box->addObjToBox(d);
+
+
+    box->printBox();
+
+    box->testObject->valueBool = true;
 
 
     return 0;

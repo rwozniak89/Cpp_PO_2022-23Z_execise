@@ -36,11 +36,9 @@
 		</Compiler>
 		<Unit filename="include/List.h" />
 		<Unit filename="include/ListElement.h" />
-		<Unit filename="include/MyList.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/List.cpp" />
 		<Unit filename="src/ListElement.cpp" />
-		<Unit filename="src/MyList.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

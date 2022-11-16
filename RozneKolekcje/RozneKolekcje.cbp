@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/MyClass.h" />
 		<Unit filename="include/MyList.h" />
+		<Unit filename="include/Zwierze.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/MyList.cpp" />
 		<Extensions />

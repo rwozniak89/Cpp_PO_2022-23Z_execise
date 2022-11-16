@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1668533385 source:c:\projects\cpp_po_2022-23z_execise\mojalista\main.cpp
+1668544119 source:c:\projects\cpp_po_2022-23z_execise\mojalista\main.cpp
 	<iostream>
-	"MyList.h"
+	"List.h"
 
-1668533283 source:c:\projects\cpp_po_2022-23z_execise\mojalista\src\list.cpp
+1668544108 source:c:\projects\cpp_po_2022-23z_execise\mojalista\src\list.cpp
 	"List.h"
 	<iostream>
 
